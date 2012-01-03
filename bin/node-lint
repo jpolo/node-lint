@@ -14,7 +14,7 @@ var util = require(process.binding('natives').util ? 'util' : 'sys'),
 
 
 //called as main executable
-var usage = "Usage: " + process.ARGV[0] + " file.js [dir1 file2 dir2 ...] [options]\n" +
+var usage = "Usage: " + process.argv[0] + " file.js [dir1 file2 dir2 ...] [options]\n" +
 	"Options:\n\n" +
 	"  --config=FILE     the path to a JSON file with JSLINT options\n" +
 	"  --formatter=FILE  optional path to a /dir/dir/file.hs file to customize the output\n" +
@@ -23,7 +23,7 @@ var usage = "Usage: " + process.ARGV[0] + " file.js [dir1 file2 dir2 ...] [optio
 	"  --pretty          enable pretty print for some format (XML, etc)\n" +
 	"  -h, --help        display this help and exit\n" +
 	"  -v, --version     output version information and exit", 
-	args = process.ARGV.splice(2), arg,
+	args = process.argv.splice(2), arg,
 	positionals = [], 
 	options = {
 	    formatter: {
