@@ -100,11 +100,11 @@ has a function in it named `reporter`:
 
 `example-reporter.js`:
 
-    var sys = require('sys');
+    var util = require('util');
 
     function reporter(results) {
         var len = results.length;
-        sys.puts(len + ' error' + ((len === 1) ? '' : 's'));
+        util.puts(len + ' error' + ((len === 1) ? '' : 's'));
     }
 
 Then when you run node-lint from the command line, pass in the customized
@@ -152,7 +152,7 @@ credits
 
 - [Mamading Ceesay][evangineer], added support for using node-lint within Emacs.
 
-- [Matt Ranney][mranney], updated node-lint to use sys.error.
+- [Matt Ranney][mranney], updated node-lint to use util.error.
 
 - [Cliffano Subagio], added npm installation support, XML reporter, and directory param support.
 
